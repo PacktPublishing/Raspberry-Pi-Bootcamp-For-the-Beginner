@@ -1,0 +1,48 @@
+Google Voice Kit Edits and Setup/Run Process
+
+>> Step 1. Edit Config File and reboot
+
+sudo leafpad /boot/config.txt
+
+dtparam=audio=on
+#[pi0]
+#dtoverlay=dwc2
+#[all]
+#gpu_mem=128
+
+dtoverlay=googlevoicehat-soundcard
+
+
+>> Step 2. Edit check_audio.py file
+
+cd /home/pi/AIY-voice-kit-python/checkpoints
+
+sudo check_audio.py
+
+In here change
+
+def main():
+	if not check_sound_card_present():
+		return
+
+to
+
+def main():
+#	if not check_sound_card_present():
+#		return
+
+
+>> Create Google Cloud credentials, download it and rename to assistant.json and save in the /home/pi folder
+
+/home/pi/assistant.json
+
+
+>> Step 3. Perform audio check
+
+>> Step 4. Run the Program to test
+
+Start Dev Terminal
+
+Run
+
+src/examples/voice/assistant_library_with_button_demo.py

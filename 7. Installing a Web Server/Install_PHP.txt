@@ -1,0 +1,12 @@
+>> Install PHP
+
+sudo apt-get install php libapache2-mod-php -y
+
+>> Restart Apache
+
+sudo apachectl restart
+
+
+>> Setting permissions on html folder
+
+sudo chmod -R 777 /var/www/html/

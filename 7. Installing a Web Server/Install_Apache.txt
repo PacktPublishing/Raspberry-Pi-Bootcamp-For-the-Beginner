@@ -1,0 +1,11 @@
+>> Update Raspbian
+
+sudo apt-get update
+
+>> Install Apache
+
+sudo apt-get install apache2 -y
+
+>> Get IP Address
+
+hostname -I

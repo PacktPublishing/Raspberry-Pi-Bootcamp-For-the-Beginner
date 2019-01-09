@@ -1,0 +1,10 @@
+>> Give Apache User Advanced Privileges
+
+-- Edit the sudoers file
+
+sudo visudo
+
+
+>> New entry in sudoers file
+
+www-data ALL=NOPASSWD:ALL
